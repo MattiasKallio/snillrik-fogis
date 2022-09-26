@@ -1,0 +1,47 @@
+.snillrik-fogis-list-wrapper{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.snillrik-fogis-list-wrapper li{
+    background: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e3e3e3;
+    padding: 10px 0;
+}
+
+.snillrik-fogis-list-item{
+    cursor: pointer;
+}
+
+.snillrik-fogis-list-item-inner{
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.snillrik-fogis-list-item-inner div{
+    flex: 1;
+    text-align: center;
+}
+.snillrik-fogis-list-item-inner .snillrik-fogis-list-item-inner-content{
+    flex: 2;
+}
+
+.snillrik-fogis-list-age-category{
+    font-size: 70%;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;  
+}
+
+.match-list__link{
+    text-align: center;
+}
+.match-list__result{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

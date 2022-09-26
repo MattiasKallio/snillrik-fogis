@@ -1,0 +1,23 @@
+.snfogis-admin-wrapper{
+    display: flex;
+}
+.snfogis-admin-wrapper-left, .snfogis-admin-wrapper-right{
+    flex: 1;
+}
+.snfogis-admin-wrapper-right{
+    flex: 2;
+}
+.snfogis-admin-box-inner{
+    padding: 10px;
+}
+.snfogis-admin-box-inner select{
+    width: 400px;
+    margin: 2px 0;
+    padding: 5px 10px;
+}
+.snfogis-admin-box-inner-content-part{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
