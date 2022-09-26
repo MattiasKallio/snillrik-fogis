@@ -1,5 +1,5 @@
-# snillrik-fogis
-Wordpress plugin for displaying soccer info from Fogis using generated shortcodes.
+# Snillrik Fogis
+#### Wordpress plugin for displaying soccer info from Fogis using generated shortcodes.
 
 ## How to use
 It's not very well documented just right now. But the basic idea is to generate shortcodes under the Fogis settings-page by selecting teams etc. 
