@@ -7,4 +7,4 @@ Then use the shortcodes on pages or in widgets or where ever. :)
 
 ## How official is this pluign?
 Not at frikken all. I got a request from a football club that wanted some of this functionallity, and discovered that it's possible to make API calls. 
-I'm not sure if it's intended to be used this way, but it might be turned off or blocket from external use. (But also it have been working for 3 years according to people I've talked to)
+I'm not sure if it's intended to be used this way, but it might be turned off or blocked from external use. (But also it have been working for 3 years according to people I've talked to)
