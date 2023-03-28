@@ -1,4 +1,5 @@
 # Snillrik Fogis
+## They have changed it a lot, so most stuff in the admin area don't work. But it's still a good start if you want to build something on your own. I'll try to update this when I have the time, but as for right now I don't. Sori. :/
 #### Wordpress plugin for displaying soccer info from Fogis using generated shortcodes.
 
 ## How to use
