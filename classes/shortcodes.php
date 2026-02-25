@@ -207,7 +207,6 @@ class SNFogis_Shortcodes
             $show_only_club = true;
             if ($attributes["clubid"]) {
                 $club_teams = SNFogis_API::list_of_teams($attributes["clubid"]);
-                //$show_only_club = !$club_teams || in_array($compid, $club_teams);
             }
 
             $html_out .= "<ul class='snillrik-fogis-list-wrapper'>";

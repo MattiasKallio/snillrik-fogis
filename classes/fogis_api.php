@@ -137,7 +137,7 @@ class SNFogis_API
         $api = new SNFogis_API();
         $comps = [];
 
-        //$comps = get_transient('snfo_club_comps_' . $clubId);
+        $comps = get_transient('snfo_club_comps_' . $clubId);
         if (!$comps) {
             $club_comps = $api->call("comp-find/getclubcompetitions/", ["clubId" => $clubId]);
             foreach ($club_comps->competitions as $comp) {
