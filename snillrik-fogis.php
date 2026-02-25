@@ -3,7 +3,7 @@
 Plugin Name: Snillrik Fogis
 Plugin URI: http://www.snillrik.se/
 Description: Snillrik Fogis is a WordPress plugin for getting and displaying info from Fogis about Svensk Fotboll       
-Version: 0.1.3
+Version: 0.1.5
 Author: Mattias Kallio
 Author URI: http://www.snillrik.se
 License: GPL2
