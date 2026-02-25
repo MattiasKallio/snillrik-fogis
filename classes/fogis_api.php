@@ -61,6 +61,25 @@ class SNFogis_API
         wp_die();
     }
 
+    public static function list_of_teams($clubId)
+    {
+        $transient_name = 'snfo_teams_' . $clubId;
+        if (SNILLRIK_FOGIS_USE_TRANSIENTS && $teams = get_transient($transient_name)) {
+            return $teams;
+        }
+        $teams = SNFogis_API::call('club/getteams/', ['clubId' => $clubId]);
+        if(!$teams || !isset($teams->teams)) {
+            return [];
+        }
+        foreach ($teams->teams as $team) {
+            $teams_arr[] = wp_kses_post($team->name);
+        }
+        //unique teams
+        $teams_arr = array_unique($teams_arr);
+        set_transient($transient_name, $teams_arr, 60 * 60 * 24);
+        return $teams_arr;
+    }
+
     /**
      * Get list of competitions.
      */
@@ -118,7 +137,7 @@ class SNFogis_API
         $api = new SNFogis_API();
         $comps = [];
 
-        $comps = get_transient('snfo_club_comps_' . $clubId);
+        //$comps = get_transient('snfo_club_comps_' . $clubId);
         if (!$comps) {
             $club_comps = $api->call("comp-find/getclubcompetitions/", ["clubId" => $clubId]);
             foreach ($club_comps->competitions as $comp) {

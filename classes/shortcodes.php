@@ -195,25 +195,27 @@ class SNFogis_Shortcodes
             ["associationId" => $attributes["districtid"], "date" => $date_calced]
         );
 
-        /*         $html_out = "<h4>Dagens matcher i distriktet</h4>";
+         /*        $html_out = "<h4>Dagens matcher i distriktet</h4>";
         if ($attributes["clubid"]) {
-            $html_out .= "<p>i tävlingar som klubben är med i, inte bara matcher de spelat.</p>";
-        } */
-        $html_out = "";
+             $html_out .= "<p>i tävlingar som klubben är med i, inte bara matcher de spelat.</p>";
+        }*/
+       $html_out = "";
         foreach ($districts->competitions as $comp) {
             $compid = $comp->competitionId;
             $name = $comp->name;
             $games = $comp->games;
             $show_only_club = true;
             if ($attributes["clubid"]) {
-                $club_comps = SNFogis_API::get_club_comps($attributes["clubid"]);
-                $show_only_club = !$club_comps || in_array($compid, $club_comps);
+                $club_teams = SNFogis_API::list_of_teams($attributes["clubid"]);
+                //$show_only_club = !$club_teams || in_array($compid, $club_teams);
             }
 
             $html_out .= "<ul class='snillrik-fogis-list-wrapper'>";
             if ($show_only_club) {
                 foreach ($games as $game) {
-
+                    if($attributes["clubid"] && !in_array($game->homeTeam->name, $club_teams) && !in_array($game->awayTeam->name, $club_teams)){
+                        continue;
+                    }
                     $show_age = !$attributes["age"] || strtolower($comp->ageCategoryName) == strtolower($attributes["age"]);
                     $show_gender = !$attributes["gender"] || strtolower($comp->genderName) == strtolower($attributes["gender"]);
                     if ($show_age && $show_gender) {
